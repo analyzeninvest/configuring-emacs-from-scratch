@@ -1,0 +1,277 @@
+
+
+* packages
+
+** melpa
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/" ) t)
+(package-initialize)
+#+END_SRC
+
+* varibales for modes
+
+** display & input
+
+*** description
+
+    Basic display & inputs. Below varibles set:
+- disable menu bar, tool bar, scrool bar, init splash screen
+- display linumber mode, column mode, time, battery life, file size, hilight line, visual line
+- disable backup files
+- save cursor position
+- auto revert file
+- start with maximized frame
+- auto complete parenthesis & hilight parenthesis ends
+
+*** codes
+
+  #+BEGIN_SRC emacs-lisp
+  (menu-bar-mode -1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  ;(toggle-frame-maximized) ;;; not using this one any more as each time init.el is eavluated, frame is toggled
+  (add-to-list 'default-frame-alist '(fullscreen . maximized))
+  (setq inhibit-splash-screen t)
+  (setq make-backup-files nil)
+  (global-linum-mode 1)
+  (defalias 'yes-or-no-p 'y-or-n-p)
+  (display-time-mode 1)
+  (display-battery-mode 1)
+  (setq column-number-mode t)
+  (global-hl-line-mode 1)
+  (electric-pair-mode 1)
+  (show-paren-mode 1)
+  (savehist-mode 1)
+  (global-auto-revert-mode 1)
+  (global-visual-line-mode 1)
+  (size-indication-mode 1)
+  (set-language-environment "UTF-8")
+  #+END_SRC
+
+** ido
+
+*** description
+    Interactive-DO.
+    Interactive DO mode is an inbuilt mode for 'find-files' interactively.
+
+    Below varibles sets:
+- enable ido mode
+- set ido for all buffers
+- flexible match, for matching names at any location
+- create new buffer always
+- sorting the file names according the list
+
+Thanks to: [[https://www.masteringemacs.org/article/introduction-to-ido-mode][Mickey Peterson's IDO blog]]
+
+*** codes
+
+#+BEGIN_SRC emacs-lisp
+(ido-mode 1)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
+(setq ido-use-filename-at-point 'guess)
+(setq ido-create-new-buffer 'always)
+(setq ido-file-extension-order '(".org" ".txt" ".csv"))
+
+#+END_SRC
+
+
+** winner mode
+
+*** description
+    winner mode for storing the window configurations
+    Thanks to: [[https://www.emacswiki.org/emacs/WinnerMode][Emacs Wiki for winner mode]]
+
+*** code
+#+BEGIN_SRC emacs-lisp
+(winner-mode 1)
+#+END_SRC
+
+* installed packages
+
+** ido describe binding
+
+** ido grid mode
+#+BEGIN_SRC emacs-lisp
+(ido-grid-mode 1)
+#+END_SRC
+
+** org bullets
+#+BEGIN_SRC emacs-lisp
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda() (org-bullets-mode 1)))
+#+END_SRC
+
+** ivy + swiper + counsel 
+
+*** description
+    github repo : https://github.com/abo-abo/swiper
+    ivy + swiper + counsel in an alternative for isearch, M-x, switech buffer etc.
+
+    find-file is not bound to counsel-find-file. That behaviour is
+    kept to ido-find-file. Reason for that is, search & find
+    capability of ido-find-file. e.g. say you type: '.org';
+    counsel-find-file will search .org file within the dir but
+    ido-find-file will search the database for the same. Similar
+    action can be obtained by counsel-locate. I like the ido feature
+    of finding file with search if not found in the dir.
+
+*** codes
+#+BEGIN_SRC emacs-lisp
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+;(global-set-key (kbd "C-x C-f") 'counsel-find-file) ;;; keep IDO mode for find file
+(global-set-key (kbd "C-y") 'counsel-yank-pop)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> l") 'counsel-find-library)
+(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+
+#+END_SRC
+
+** magit
+
+#+BEGIN_SRC emacs-lisp
+(require 'magit)
+#+END_SRC
+
+** iedit
+
+https://www.emacswiki.org/emacs/Iedit
+
+#+BEGIN_SRC emacs-lisp
+(require 'iedit)
+#+END_SRC
+
+** paredit
+#+BEGIN_SRC emacs-lisp
+(require 'paredit)
+(paredit-mode 1)
+#+END_SRC
+
+** company
+#+BEGIN_SRC emacs-lisp
+(add-hook 'after-init-hook 'global-company-mode)
+(global-company-mode t)
+(setq company-minimum-prefix-length 1)
+(setq company-idle-delay 0)
+#+END_SRC
+** company quickhelp
+#+BEGIN_SRC emacs-lisp
+(company-quickhelp-mode 1)
+(setq company-quickhelp-delay 0)
+#+END_SRC
+** anaconda
+#+BEGIN_SRC emacs-lisp
+(add-hook 'python-mode-hook 'anaconda-mode)
+#+END_SRC
+** company anaconda
+#+BEGIN_SRC emacs-lisp
+(require 'rx)
+(eval-after-load "company" 
+'(add-to-list 'company-backends 'company-anaconda))
+#+END_SRC
+
+
+* keybindings
+
+** codes
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-?") 'hippie-expand)
+(global-set-key (kbd "M-D") 'backward-kill-word)
+(global-set-key (kbd "DEL") 'backward-delete-char)
+(global-set-key (kbd "C-z") 'replace-string)
+(global-set-key (kbd "C-M-z") 'replace-regex)
+(global-set-key (kbd "C-Z") 'count-matches)
+#+END_SRC
+
+* themes
+#+BEGIN_SRC emacs-lisp
+(load-theme 'exotica t)
+#+END_SRC
+
+** exotica
+
+Vibrant colored dark theme.
+
+* Back to Basic
+
+** key combo
+
+   These are some basic key combo in emacs.
+
+ |-----------+---------------------------------|
+ | key combo | effect                          |
+ |-----------+---------------------------------|
+ | C-f       | forward char                    |
+ | C-b       | backward char                   |
+ | C-n       | next line                       |
+ | C-p       | previous line                   |
+ | C-a       | beginging of line               |
+ | C-e       | end of line                     |
+ | C-x [     | forward one page                |
+ | C-x ]     | backward one page               |
+ |-----------+---------------------------------|
+ | M-f       | forward word                    |
+ | M-b       | backward word                   |
+ | M-m       | first non whitespace            |
+ | M-}       | move beginging of a paragraph   |
+ | M-{       | move beginging of a paragraph   |
+ | M-a       | move beginging of a sentence    |
+ | M-e       | move beginging of a sentence    |
+ | M-<       | move to begining of buffer      |
+ | M->       | move to end of buffer           |
+ |-----------+---------------------------------|
+ | C-M-f     | forward s-expression            |
+ | C-M-b     | backward s-expression           |
+ | C-M-d     | move down to a list             |
+ | C-M-u     | move up out of list             |
+ | C-M-n     | move to next list               |
+ | C-M-p     | move to previous list           |
+ | C-M-a     | move to begining of defun       |
+ | C-M-e     | move to end of defun            |
+ |-----------+---------------------------------|
+ | C-v       | scroll down one page            |
+ | M-v       | scroll up one page              |
+ | C-M-v     | scroll down other window        |
+ | C-M-S-v   | scroll up other window          |
+ |-----------+---------------------------------|
+ | C-x r m   | set a bookmark                  |
+ | C-x r l   | list a bookmark                 |
+ | C-x r b   | jump to a bookmark              |
+ |-----------+---------------------------------|
+ | C-x r n   | store number in resistor        |
+ | C-x r s   | store region in resistor        |
+ | C-x r SPC | store point in resistor         |
+ | C-x r +   | increment content in resistor   |
+ | C-x r j   | jump to resistor                |
+ | C-x r i   | insert content of resistor      |
+ | C-x r w   | store window config in resistor |
+ | C-x r f   | store frameset in resistor      |
+ |-----------+---------------------------------|
+ | C-SPC     | mark the region                 |
+ | C-u C-SPC | Jump to mark                    |
+ | C-x C-x   | exchanges mark & point          |
+ |-----------+---------------------------------|
+ | M-h       | Mark Next paragraph             |
+ | C-x h     | Mark whole buffer               |
+ | C-M-h     | mark next defun                 |
+ | C-x C-p   | mark next page                  |
+ | M-@       | mark next word                  |
+ | C-M-@     | mark next s expression          |
+ |-----------+---------------------------------|
+
+ 
