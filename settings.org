@@ -17,12 +17,13 @@
 
     Basic display & inputs. Below varibles set:
 - disable menu bar, tool bar, scrool bar, init splash screen
-- display linumber mode, column mode, time, battery life, file size, hilight line, visual line
+- display linumber mode, column mode, time, battery life, file size, hilight line, visual line, file size
 - disable backup files
 - save cursor position
 - auto revert file
 - start with maximized frame
 - auto complete parenthesis & hilight parenthesis ends
+- set font as UTF-8
 
 *** codes
 
@@ -75,7 +76,6 @@ Thanks to: [[https://www.masteringemacs.org/article/introduction-to-ido-mode][Mi
 (setq ido-file-extension-order '(".org" ".txt" ".csv"))
 
 #+END_SRC
-
 
 ** winner mode
 
