@@ -31,6 +31,8 @@
 
 (winner-mode 1)
 
+(electric-indent-mode 1)
+
 (ido-grid-mode 1)
 
 (require 'org-bullets)

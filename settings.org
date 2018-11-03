@@ -88,6 +88,16 @@ Thanks to: [[https://www.masteringemacs.org/article/introduction-to-ido-mode][Mi
 (winner-mode 1)
 #+END_SRC
 
+** electric indent mode
+
+*** description
+this is for setting the indentation.
+*** codes
+
+  #+BEGIN_SRC emacs-lisp
+  (electric-indent-mode 1)
+  #+END_SRC
+
 * installed packages
 
 ** ido describe binding
@@ -206,7 +216,6 @@ https://www.emacswiki.org/emacs/Iedit
 (eval-after-load "company" 
 '(add-to-list 'company-backends 'company-anaconda))
 #+END_SRC
-
 
 * keybindings
 
