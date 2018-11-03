@@ -144,9 +144,31 @@ Thanks to: [[https://www.masteringemacs.org/article/introduction-to-ido-mode][Mi
 
 ** magit
 
-#+BEGIN_SRC emacs-lisp
-(require 'magit)
-#+END_SRC
+*** description
+
+magit stands for Emacs got git.
+For details see: [[https://magit.vc/screenshots/][magit documentation & walkthrough]]
+
+*To add a new project:*
+1. M-x: magit-status
+2. M a -> to add the git ref name & url
+
+*To add the project to the master:*
+1. C-x g (magit-status)
+2. s (stage files & directory)
+3. i (gitignore)
+4. l/g (local or global ignore)
+5. c c (commit)
+6. type the message of the commit
+7. C-c C-c to save & execute commit
+8. P u (push the changes to remote master)
+9. Enter user name & password
+10. Check the head to see the comment added during commit
+
+*** codes
+  #+BEGIN_SRC emacs-lisp
+  (require 'magit)
+  #+END_SRC
 
 ** iedit
 
