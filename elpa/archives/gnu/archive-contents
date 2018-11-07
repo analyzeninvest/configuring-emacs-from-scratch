@@ -186,7 +186,7 @@
 		      ((:url . "https://github.com/cpitclaudel/compact-docstrings")
 		       (:keywords "convenience" "faces" "lisp" "maint" "c"))])
  (company .
-	  [(0 9 6)
+	  [(0 9 7)
 	   ((emacs
 	     (24 3)))
 	   "Modular text completion framework" tar
@@ -389,7 +389,7 @@
 	 ((:keywords "convenience" "languages")
 	  (:url . "https://github.com/joaotavora/eglot"))])
  (el-search .
-	    [(1 7 9)
+	    [(1 7 15)
 	     ((emacs
 	       (25))
 	      (stream
@@ -545,7 +545,7 @@
 	 ((:keywords "games" "processes")
 	  (:url . "http://www.gnuvola.org/software/gnugo/"))])
  (gnus-mock .
-	    [(0 1 2)
+	    [(0 2 1)
 	     nil "Mock Gnus installation for testing" tar
 	     ((:url . "http://elpa.gnu.org/packages/gnus-mock.html"))])
  (heap .
@@ -806,7 +806,7 @@
 	 ((:keywords "extensions" "lisp")
 	  (:url . "https://github.com/Malabarba/names"))])
  (nhexl-mode .
-	     [(0 9)
+	     [(1 0)
 	      ((emacs
 		(24 4))
 	       (cl-lib
@@ -1319,9 +1319,9 @@
 			      ((:keywords "snippets")
 			       (:url . "http://elpa.gnu.org/packages/yasnippet-classic-snippets.html"))])
  (zones .
-	[(2018 10 28)
+	[(2018 11 1)
 	 nil "Zones of text - like multiple regions" single
-	 ((:url . "https://www.emacswiki.org/emacs/download/zones.el")
+	 ((:url . "https://elpa.gnu.org/packages/zones.html")
 	  (:keywords "narrow" "restriction" "widen" "region" "zone"))])
  (ztree .
 	[(1 0 5)
