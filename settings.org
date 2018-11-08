@@ -1,4 +1,4 @@
-
+name : Mayukh Sen
 
 * packages
 
@@ -268,7 +268,7 @@ https://www.emacswiki.org/emacs/Iedit
 Vibrant colored dark theme.
 
 * Back to Basic
-
+  
 ** key combo
 
    These are some basic key combo in emacs.
@@ -335,3 +335,7 @@ Vibrant colored dark theme.
  |-----------+---------------------------------|
 
  
+
+
+
+
