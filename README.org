@@ -1,3 +1,8 @@
-This is the readme file in org-mode.
 
+#+TITLE: Configuring Emacs from scratch 
+#+EMAIL: analyzeninvest@protonmail.com
 
+#+BEGIN_QUOTE
+Everything should be made as simple as possible,
+but not any simpler -- Albert Einstein
+#+END_QUOTE
