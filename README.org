@@ -8,10 +8,49 @@ You can't cross the sea mearly by standing at the water.
 -Rabindranath Tagore
 #+END_QUOTE
 
+Hello everyone,
 
+I am using Emacs since 2015. Overtime the config file had grown to be
+a large 1000 line file with keybindings I do not use anymore & macros
+that were replaced by modern packages with new featured.
+
+So, this got me thinking "let me clean it up!"; issue was ineatia. But
+since I didn't wanted to clean packages one by one & fix the startup
+time & other things, i decided to delete by .emacs & make a new one. 
+
+I had an even better idea. make it a video series & post it on
+relavent forums. Thus I started oriducing the video series on:
+"configuring emacs from scratch". 
+
+In the following section, I will update the content. This include:
+- a small summery of the packages that I install
+- a brief description of the settings I change
+- reason for not including any specific package.
 
 This is my effort to make the Emacs configured from scratch. 
+Hope you like it.
 
-file:settings.org::8
+* Video 1: (setting up init & org file for literate programming)
+
+In the first video, I start by deleting my previous .emacs.d
+directory. Then I start by creating the init.el & settings.org
+file. The init.el file contained the org-babel for elisp code blocks
+used in settings.org file.
+
+I liked the idea of literate programming. So org mode with the
+org-babel tangle feature got me really exited. Thus this became the
+first video on how to do so.
+
+In the settings, I always enjoy the full screen Emacs editing with no
+GUI mouse click ontions. Thus following settings are made:
+- disable menu bar, tool bar, scroll bar, init splash screen
+- enable global linum mode
+- no auto save file
+
+Have a look:
+
+[[file:settings.org::31][org file with location]]
+[[https://www.youtube.com/watch?v=HaCIn5gvJ84&t=3s][YouTube link]]
+[[https://d.tube/#!/v/cryptoaritra/ivh62sgc][DTube link]]
 
 
