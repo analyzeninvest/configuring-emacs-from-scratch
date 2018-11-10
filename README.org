@@ -1,8 +1,17 @@
 
 #+TITLE: Configuring Emacs from scratch 
 #+EMAIL: analyzeninvest@protonmail.com
+#+AUTHOR: Aritra Bhattacharjee
 
 #+BEGIN_QUOTE
-Everything should be made as simple as possible,
-but not any simpler -- Albert Einstein
+You can't cross the sea mearly by standing at the water.
+-Rabindranath Tagore
 #+END_QUOTE
+
+
+
+This is my effort to make the Emacs configured from scratch. 
+
+file:settings.org::8
+
+
