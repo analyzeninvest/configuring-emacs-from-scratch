@@ -4,23 +4,23 @@
 #+AUTHOR: Aritra Bhattacharjee
 
 #+BEGIN_QUOTE
-You can't cross the sea mearly by standing at the water.
+You can't cross the sea merely by standing at the water.
 -Rabindranath Tagore
 #+END_QUOTE
 
 Hello everyone,
 
-I am using Emacs since 2015. Overtime the config file had grown to be
+I am using Emacs since 2015. Overtime the configuration file had grown to be
 a large 1000 line file with keybindings I do not use anymore & macros
 that were replaced by modern packages with new featured.
 
-So, this got me thinking "let me clean it up!"; issue was ineatia. But
+So, this got me thinking "let me clean it up!"; issue was inertia. But
 since I didn't wanted to clean packages one by one & fix the startup
-time & other things, i decided to delete by .emacs & make a new one. 
+time & other things, i decided to delete by .Emacs & make a new one. 
 
 I had an even better idea. make it a video series & post it on
-relavent forums. Thus I started oriducing the video series on:
-"configuring emacs from scratch". 
+relevant forums. Thus I started producing the video series on:
+"configuring Emacs from scratch". 
 
 In the following section, I will update the content. This include:
 - a small summery of the packages that I install
@@ -30,27 +30,46 @@ In the following section, I will update the content. This include:
 This is my effort to make the Emacs configured from scratch. 
 Hope you like it.
 
-* Video 1: (setting up init & org file for literate programming)
+* Video 1: (setting up init file & org file for literate programming)
 
 In the first video, I start by deleting my previous .emacs.d
 directory. Then I start by creating the init.el & settings.org
 file. The init.el file contained the org-babel for elisp code blocks
 used in settings.org file.
 
-I liked the idea of literate programming. So org mode with the
+I liked the idea of /literate programming/. So org mode with the
 org-babel tangle feature got me really exited. Thus this became the
 first video on how to do so.
 
 In the settings, I always enjoy the full screen Emacs editing with no
-GUI mouse click ontions. Thus following settings are made:
+GUI mouse click options. Thus following settings are made:
 - disable menu bar, tool bar, scroll bar, init splash screen
 - enable global linum mode
 - no auto save file
 
-Have a look:
+Please have a look:
 
 [[file:settings.org::31][org file with location]]
-[[https://www.youtube.com/watch?v=HaCIn5gvJ84&t=3s][YouTube link]]
-[[https://d.tube/#!/v/cryptoaritra/ivh62sgc][DTube link]]
+
+[[https://www.youtube.com/watch?v=HaCIn5gvJ84&t=3s][YouTube link for 1st video]]
+
+[[https://d.tube/#!/v/cryptoaritra/ivh62sgc][DTube link for 1st video]]
+
+* Video 2: (IDO)
+
+In the next video, continuing with the trend, IDO (interactive Do)
+mode specific things are set.  It is a mode that does things
+interactively. E.g. if I need to find a file, by default Emacs will
+not show the files in the directory, it only shows after 2 tabs are
+pressed. This is solved by IDO with a linear list of files or
+directory separated by '|' character.
+
+Have a look:
+
+[[file:settings.org::59][org file with location]]
+
+[[https://www.youtube.com/watch?v=lwrjN9_fHd8&t=345s][YouTube link for 2nd video]]
+
+[[https://d.tube/#!/v/cryptoaritra/wlpbl1o6][DTube link for 2nd video]]
 
 
