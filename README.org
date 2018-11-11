@@ -71,6 +71,9 @@ not show the files in the directory, it only shows after 2 tabs are
 pressed. This is solved by IDO with a linear list of files or
 directory separated by '|' character.
 
+#+CAPTION: Screenshot of the second video.
+[[file:./snapshot/snap(1).jpg]]
+
 ** Related links for this video
 
    [[file:settings.org::59][settings org file]]
@@ -82,11 +85,13 @@ directory separated by '|' character.
    [[https://www.reddit.com/r/emacs/comments/9oq41w/configuring_emacs_from_scratch_02/][Reddit]]
 
 * Video 3: (melpa package repo, ido grid mode) 
-
 In this section, I set up the melpa package repository for Emacs to
 load the packages. Form the repository, I installed the package for
 displaying the IDO find files with a grid mode, rather than the
 default linear one.
+
+#+CAPTION: Screenshot of the third video.
+[[file:./snapshot/snap(2).jpg]]
 
 ** Related links for this video
 
@@ -98,10 +103,16 @@ default linear one.
 
    [[https://www.reddit.com/r/emacs/comments/9pt8yb/configuring_emacs_from_scratch_03/][Reddit]]
 
-
 * Video 4: (Themes & org bullets)
 
-In this one, I set up the theme for the Emacs. I like to choose the theme, based on the readibility of the code. I like dark contrasting colors for that job. Also I really like the org bullets package for making some cool bullets for org mode.
+In this one, I set up the theme for the Emacs. I like to choose the
+theme, based on the readibility of the code. I like dark contrasting
+colors for that job. Also I really like the org bullets package for
+making some cool bullets for org mode.
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(3).jpg]]
+
 
 ** Related links for this video
 
