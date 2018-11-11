@@ -50,7 +50,7 @@ GUI mouse click options. Thus following settings are made:
 - no auto save file
 
 #+CAPTION: Screenshot of the first video.
-[[file:~/Downloads/snap.jpg][video-1]]
+[[file:snapshot/snap.jpg][video-1]]
 
 ** Related links for this video
 
