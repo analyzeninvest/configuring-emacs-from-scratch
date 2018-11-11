@@ -10,19 +10,20 @@ You can't cross the sea merely by standing at the water.
 
 Hello everyone,
 
-I am using Emacs since 2015. Overtime the configuration file had grown to be
-a large 1000 line file with keybindings I do not use anymore & macros
-that were replaced by modern packages with new featured.
+I am using Emacs since 2015. Overtime the configuration file had grown
+to be a large 1000 line file with keybindings I do not use anymore &
+macros that were replaced by modern packages with newer features.
 
-So, this got me thinking "let me clean it up!"; issue was inertia. But
-since I didn't wanted to clean packages one by one & fix the startup
-time & other things, i decided to delete by .Emacs & make a new one. 
+So, this got me thinking "let me clean it up!"; issue was- inertia. I
+didn't wanted to clean packages one by one & fix the
+startup. Eventually I decided to delete my .Emacs & make a new one.
 
-I had an even better idea. make it a video series & post it on
-relevant forums. Thus I started producing the video series on:
-"configuring Emacs from scratch". 
+I had an even better idea. Make it a video series & post it on
+relevant forums. Thus I started creating the video series on:
+"configuring Emacs from scratch".
 
-In the following section, I will update the content. This include:
+In the following section, I will update my journey with the video &
+description for the same. This will include:
 - a small summery of the packages that I install
 - a brief description of the settings I change
 - reason for not including any specific package.
@@ -47,13 +48,15 @@ GUI mouse click options. Thus following settings are made:
 - enable global linum mode
 - no auto save file
 
-Please have a look:
+** Related links for this video
 
-[[file:settings.org::31][org file with location]]
+ [[file:settings.org::31][settings org file]]
 
-[[https://www.youtube.com/watch?v=HaCIn5gvJ84&t=3s][YouTube link for 1st video]]
+ [[https://www.youtube.com/watch?v=HaCIn5gvJ84&t=3s][YouTube]]
 
-[[https://d.tube/#!/v/cryptoaritra/ivh62sgc][DTube link for 1st video]]
+ [[https://d.tube/#!/v/cryptoaritra/ivh62sgc][DTube]]
+
+ [[https://www.reddit.com/r/emacs/comments/9md7dy/configuring_emacs_from_scratch_01/][Reddit]]
 
 * Video 2: (IDO)
 
@@ -64,12 +67,31 @@ not show the files in the directory, it only shows after 2 tabs are
 pressed. This is solved by IDO with a linear list of files or
 directory separated by '|' character.
 
-Have a look:
+** Related links for this video
 
-[[file:settings.org::59][org file with location]]
+ [[file:settings.org::59][settings org file]]
 
-[[https://www.youtube.com/watch?v=lwrjN9_fHd8&t=345s][YouTube link for 2nd video]]
+ [[https://www.youtube.com/watch?v=lwrjN9_fHd8&t=345s][YouTube]]
 
-[[https://d.tube/#!/v/cryptoaritra/wlpbl1o6][DTube link for 2nd video]]
+ [[https://d.tube/#!/v/cryptoaritra/wlpbl1o6][DTube]]
+
+ [[https://www.reddit.com/r/emacs/comments/9oq41w/configuring_emacs_from_scratch_02/][Reddit]]
+
+* Video 3: (melpa package repo, ido grid mode) 
+
+In this section, I set up the melpa package repository for Emacs to
+load the packages. Form the repository, I installed the package for
+displaying the IDO find files with a grid mode, rather than the
+default linear one.
+
+** Related links for this video
+
+   [[file:settings.org::8][settings org file]]
+
+   [[https://www.youtube.com/watch?v=MeBtczUz0C4&t=303s][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/becagfj2][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9pt8yb/configuring_emacs_from_scratch_03/][Reddit]]
 
 
