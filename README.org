@@ -4,8 +4,9 @@
 #+AUTHOR: Aritra Bhattacharjee
 
 #+BEGIN_QUOTE
-You can't cross the sea merely by standing at the water.
--Rabindranath Tagore
+The small wisdom is like water in a glass: clear, tranperent &
+pure. The great wisdom is like the water in the sea: dark, mysterious,
+impenetrable. -Rabindranath Tagore
 #+END_QUOTE
 
 Hello everyone,
@@ -48,15 +49,18 @@ GUI mouse click options. Thus following settings are made:
 - enable global linum mode
 - no auto save file
 
+#+CAPTION: Screenshot of the first video.
+[[file:~/Downloads/snap.jpg][video-1]]
+
 ** Related links for this video
 
- [[file:settings.org::31][settings org file]]
-
- [[https://www.youtube.com/watch?v=HaCIn5gvJ84&t=3s][YouTube]]
-
- [[https://d.tube/#!/v/cryptoaritra/ivh62sgc][DTube]]
-
- [[https://www.reddit.com/r/emacs/comments/9md7dy/configuring_emacs_from_scratch_01/][Reddit]]
+   [[file:settings.org::31][settings org file]]
+   
+   [[https://www.youtube.com/watch?v=HaCIn5gvJ84&t=3s][YouTube]]
+   
+   [[https://d.tube/#!/v/cryptoaritra/ivh62sgc][DTube]]
+   
+   [[https://www.reddit.com/r/emacs/comments/9md7dy/configuring_emacs_from_scratch_01/][Reddit]]
 
 * Video 2: (IDO)
 
@@ -69,13 +73,13 @@ directory separated by '|' character.
 
 ** Related links for this video
 
- [[file:settings.org::59][settings org file]]
-
- [[https://www.youtube.com/watch?v=lwrjN9_fHd8&t=345s][YouTube]]
-
- [[https://d.tube/#!/v/cryptoaritra/wlpbl1o6][DTube]]
-
- [[https://www.reddit.com/r/emacs/comments/9oq41w/configuring_emacs_from_scratch_02/][Reddit]]
+   [[file:settings.org::59][settings org file]]
+   
+   [[https://www.youtube.com/watch?v=lwrjN9_fHd8&t=345s][YouTube]]
+   
+   [[https://d.tube/#!/v/cryptoaritra/wlpbl1o6][DTube]]
+   
+   [[https://www.reddit.com/r/emacs/comments/9oq41w/configuring_emacs_from_scratch_02/][Reddit]]
 
 * Video 3: (melpa package repo, ido grid mode) 
 
