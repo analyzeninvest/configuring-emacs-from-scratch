@@ -95,3 +95,19 @@ default linear one.
    [[https://www.reddit.com/r/emacs/comments/9pt8yb/configuring_emacs_from_scratch_03/][Reddit]]
 
 
+* Video 4: (Themes & org bullets)
+
+In this one, I set up the theme for the Emacs. I like to choose the theme, based on the readibility of the code. I like dark contrasting colors for that job. Also I really like the org bullets package for making some cool bullets for org mode.
+
+** Related links for this video
+
+   [[file:settings.org::269][settings org file]]
+
+   [[https://www.youtube.com/watch?v=Y9BM_mIRHJk][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/rhqfz0gz][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9pt8yb/configuring_emacs_from_scratch_03/][Reddit]]
+
+
+
