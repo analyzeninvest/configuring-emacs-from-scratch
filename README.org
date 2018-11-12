@@ -124,7 +124,6 @@ making some cool bullets for org mode.
 
    [[https://www.reddit.com/r/emacs/comments/9pt8yb/configuring_emacs_from_scratch_03/][Reddit]]
 
-
 * Video 5: (key bindings & other setup)
 
 Keybinding is one of the important aspect of the Emacs. In this video
@@ -150,7 +149,6 @@ I remap some of the keybindings:
 
    [[https://www.reddit.com/r/emacs/comments/9qqvpg/configuring_emacs_from_scratch_05/][Reddit]]
 
-
 * Video 6: (ivy + counsel + swiper)
 
 The default isearch, M-x, switch-buffer of Emacs is nice, but to make
@@ -173,7 +171,6 @@ file.
 
    [[https://www.reddit.com/r/emacs/comments/9re7tw/configuring_emacs_from_scratch_06/][Reddit]]
 
-
 * Video 7: (magit)
 
 In this video, I install & set up magit. Magit or Emacs got git is a
@@ -193,3 +190,87 @@ great package for using git inside Emacs.
    [[https://d.tube/#!/v/cryptoaritra/hjyxksu6][DTube]]
 
    [[https://www.reddit.com/r/emacs/comments/9s487j/configuring_emacs_from_scratch_07_magit/][Reddit]]
+
+* Video 8: (iedit & paredit)
+For the 8th video, I am setting up 2 very useful packages for coding. 
+
+1. iedit:
+iedit is for interactive editing. Say we need to edit the name of the
+variable in a defun/buffer. For that we can interactively search &
+replace. I find it better to use the iedit package. If I place the
+point below the symbol & start iedit, it replaces the symbol in the
+buffer. Same can be done with line, defun or in a region with
+narrow-region.
+2. paredit:
+paredit is most useful when we use the elisp codes. It has many useful
+features like keeping braces & quotes balanced, burfage / slurpage of
+the braces, joining 2 sexp, spliting 2 sexp, making escape string etc
+to name a few.
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(7).jpg]]
+
+** Related links for this video
+
+   [[file:settings.org::188][settings org file]]
+
+   [[https://www.youtube.com/watch?v=xrNOLTAl1ug&t=137s][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/c731o52e][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9sqp84/configuring_emacs_from_scratch_08/][Reddit]]
+
+* Video 9: (company anaconda company-quickhelp company-anaconda)
+Next, we need to have some sort of autocomplete features in Emacs
+while coding. There are 2 primary packages for doing that job:
+1. auto-complete
+2. company
+
+Both packages are great, but personally I like company mode
+better. This does come with a drawback. To get all the features in
+autocomplete in Python, we need some more packages, namely:
+1. company-quickhelp: for displaying the doc string
+2. anaconda: for running python based autocomplete
+3. company-anaconda: for running anaconda with company
+
+But overall I find it useful.
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(8).jpg]]
+
+** Related links for this video
+
+   [[file:settings.org::217][settings org file]]
+
+   [[https://www.youtube.com/watch?v=cSm3doCNyko&t=74s][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/qkndfusf][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9tmt9v/configuring_emacs_from_scratch_09_company/][Reddit]]
+
+* Video 10: (yasnippets with company)
+
+In order to get some quick scripting in Emacs, we installed the
+package called yasnippets (yet another snippets).
+
+The default package for yasnippets do not contain any snippets. For
+that, we need yasnippet snippets.
+
+Now by default, it is expected to work seamlessly with [tabs] but that
+kind of conflicts with the company mode's auto feature sometime. What
+I found was, we need to have an extra space to get it working. I did
+not lie that behaviour. So I bounded it to M-z which by default is
+zap-to-char, but I rearly needed that feature, so I remapped it.
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(9).jpg]]
+
+** Related links for this video
+
+   [[file:settings.org::245][settings org file]]
+
+   [[https://www.youtube.com/watch?v=u1P1Zm53D9w&t=274s][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/4edknmnb][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9v23r6/configuring_emacs_from_scratch_10_yasnippets/][Reddit]]
