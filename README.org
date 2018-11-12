@@ -4,7 +4,7 @@
 #+AUTHOR: Aritra Bhattacharjee
 
 #+BEGIN_QUOTE
-The small wisdom is like water in a glass: clear, tranperent &
+The small wisdom is like water in a glass: clear, transparent &
 pure. The great wisdom is like the water in the sea: dark, mysterious,
 impenetrable. -Rabindranath Tagore
 #+END_QUOTE
@@ -106,7 +106,7 @@ default linear one.
 * Video 4: (Themes & org bullets)
 
 In this one, I set up the theme for the Emacs. I like to choose the
-theme, based on the readibility of the code. I like dark contrasting
+theme, based on the readability of the code. I like dark contrasting
 colors for that job. Also I really like the org bullets package for
 making some cool bullets for org mode.
 
@@ -192,7 +192,7 @@ great package for using git inside Emacs.
    [[https://www.reddit.com/r/emacs/comments/9s487j/configuring_emacs_from_scratch_07_magit/][Reddit]]
 
 * Video 8: (iedit & paredit)
-For the 8th video, I am setting up 2 very useful packages for coding. 
+For the 8Th video, I am setting up 2 very useful packages for coding. 
 
 1. iedit:
 iedit is for interactive editing. Say we need to edit the name of the
@@ -204,7 +204,7 @@ narrow-region.
 2. paredit:
 paredit is most useful when we use the elisp codes. It has many useful
 features like keeping braces & quotes balanced, burfage / slurpage of
-the braces, joining 2 sexp, spliting 2 sexp, making escape string etc
+the braces, joining 2 sexp, splitting 2 sexp, making escape string etc
 to name a few.
 
 #+CAPTION: Screenshot of the forth video.
@@ -254,13 +254,13 @@ In order to get some quick scripting in Emacs, we installed the
 package called yasnippets (yet another snippets).
 
 The default package for yasnippets do not contain any snippets. For
-that, we need yasnippet snippets.
+that, we need yasnippets snippets.
 
 Now by default, it is expected to work seamlessly with [tabs] but that
 kind of conflicts with the company mode's auto feature sometime. What
 I found was, we need to have an extra space to get it working. I did
 not lie that behaviour. So I bounded it to M-z which by default is
-zap-to-char, but I rearly needed that feature, so I remapped it.
+zap-to-char, but I hardly needed that feature, so I remapped it.
 
 #+CAPTION: Screenshot of the forth video.
 [[file:./snapshot/snap(9).jpg]]
