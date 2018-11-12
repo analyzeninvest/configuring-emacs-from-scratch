@@ -125,4 +125,71 @@ making some cool bullets for org mode.
    [[https://www.reddit.com/r/emacs/comments/9pt8yb/configuring_emacs_from_scratch_03/][Reddit]]
 
 
+* Video 5: (key bindings & other setup)
 
+Keybinding is one of the important aspect of the Emacs. In this video
+I remap some of the keybindings:
+
+- hippie-expand
+- backward-kill-word
+- backward-delete-char
+- replace-string
+- replace-regex
+- count-matches
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(4).jpg]]
+
+** Related links for this video
+
+   [[file:settings.org::259][settings org file]]   
+
+   [[https://www.youtube.com/watch?v=9l0mhBXpEW0&t=524s][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/gggoc83h][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9qqvpg/configuring_emacs_from_scratch_05/][Reddit]]
+
+
+* Video 6: (ivy + counsel + swiper)
+
+The default isearch, M-x, switch-buffer of Emacs is nice, but to make
+it nicer, ivy + swiper (replacement of isearch) + counsel (replacement
+of find-file switch-buffer etc). I set the keybindings for the swiper
+but do not replace the find-file. I like the IDO feature for the find
+file.
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(5).jpg]]
+
+
+** Related links for this video
+
+   [[file:settings.org::116][settings org file]]
+
+   [[https://www.youtube.com/watch?v=tvT5-czpNGc&t=34s][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/3td97p72][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9re7tw/configuring_emacs_from_scratch_06/][Reddit]]
+
+
+* Video 7: (magit)
+
+In this video, I install & set up magit. Magit or Emacs got git is a
+great package for using git inside Emacs.
+
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(6).jpg]]
+
+
+** Related links for this video
+
+   [[file:settings.org::180][settings org file]]
+
+   [[https://www.youtube.com/watch?v=CXAoFRPpGh0&t=189s][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/hjyxksu6][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9s487j/configuring_emacs_from_scratch_07_magit/][Reddit]]
