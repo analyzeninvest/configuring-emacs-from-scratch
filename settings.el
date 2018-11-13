@@ -106,6 +106,10 @@
 
   (global-set-key (kbd "M-z") 'tab-indent-or-complete)
 
+(require 'highlight-indent-guides)
+(setq highlight-indent-guides-method 'column)
+(add-hook 'python-mode-hook 'highlight-indent-guides-mode)
+
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word)
 (global-set-key (kbd "DEL") 'backward-delete-char)

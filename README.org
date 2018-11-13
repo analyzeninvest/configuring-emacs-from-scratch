@@ -62,6 +62,7 @@ GUI mouse click options. Thus following settings are made:
    
    [[https://www.reddit.com/r/emacs/comments/9md7dy/configuring_emacs_from_scratch_01/][Reddit]]
 
+   [[https://www.patreon.com/posts/emacs-set-up-01-22552309][Patreon]]
 * Video 2: (IDO)
 
 In the next video, continuing with the trend, IDO (interactive Do)
