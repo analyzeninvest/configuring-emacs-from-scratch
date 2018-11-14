@@ -275,3 +275,20 @@ zap-to-char, but I hardly needed that feature, so I remapped it.
    [[https://d.tube/#!/v/cryptoaritra/4edknmnb][DTube]]
 
    [[https://www.reddit.com/r/emacs/comments/9v23r6/configuring_emacs_from_scratch_10_yasnippets/][Reddit]]
+
+* Video 11: (hilight-indent-guides)
+In this video, after describing the org mode readme to Github; I am showing a minor package for highlighting the indentation in the Python code. This is useful as for languages that depend on the indentation, it is handy to see the different indentation levels.
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(10).jpg]]
+
+** Related links for this video
+
+   [[analyzeninvest@protonmail.com][settings org file]]
+
+   [[https://www.youtube.com/watch?v=pTwISbC5e7o][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/tc62j7t7][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/9x3ofc/configuring_emacs_from_scratch_11/][Reddit]]
+ 
