@@ -18,7 +18,7 @@
  '(magit-dispatch-arguments nil)
  '(package-selected-packages
    (quote
-    (flycheck flyspell-correct-ivy highlight-indent-guides yasnippet-snippets company-anaconda trr yasnippet company-quickhelp company paredit iedit magit counsel-projectile counsel ivy org-bullets cycle-themes dracula-theme exotica-theme ido-grid-mode ido-describe-bindings))))
+    (langtool flycheck flyspell-correct-ivy highlight-indent-guides yasnippet-snippets company-anaconda trr yasnippet company-quickhelp company paredit iedit magit counsel-projectile counsel ivy org-bullets cycle-themes dracula-theme exotica-theme ido-grid-mode ido-describe-bindings))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

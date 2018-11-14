@@ -856,7 +856,7 @@
        ((:keywords "outlines" "hypermedia" "calendar" "wp")
 	(:url . "http://elpa.gnu.org/packages/org.html"))])
  (org-edna .
-	   [(1 0 -2 6)
+	   [(1 0 -2 8)
 	    ((emacs
 	      (25 1))
 	     (seq
