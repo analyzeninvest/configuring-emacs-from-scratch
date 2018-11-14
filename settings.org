@@ -246,11 +246,11 @@ https://www.emacswiki.org/emacs/Iedit
 
 #+END_SRC
 ** yasnippet snippet
-** highlight indentation mode
+** highlight indentation guide
 #+BEGIN_SRC emacs-lisp
 (require 'highlight-indent-guides)
-(setq highlight-indent-guides-method 'column)
 (add-hook 'python-mode-hook 'highlight-indent-guides-mode)
+(setq highlight-indent-guides-method 'column)
 #+END_SRC
 * keybindings
 
