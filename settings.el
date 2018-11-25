@@ -1,6 +1,9 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/" ) t)
 (package-initialize)
 
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/" ) t)
+(package-initialize)
+
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -32,6 +35,8 @@
 (winner-mode 1)
 
 (electric-indent-mode 1)
+
+(add-to-list 'org-export-backends 'taskjuggler)
 
 (ido-grid-mode 1)
 
@@ -65,6 +70,12 @@
 
 (require 'paredit)
 (paredit-mode 1)
+(global-set-key (kbd "C-<left>") 'paredit-forward-slurp-sexp)
+(global-set-key (kbd "C-M-<left>") 'paredit-backward-slurp-sexp)
+(global-set-key (kbd "C-<right>") 'paredit-forward-barf-sexp)
+(global-set-key (kbd "C-M-<right>") 'paredit-backward-slurp-sexp)
+(global-set-key (kbd "M-S") 'paredit-split-sexp)
+(global-set-key (kbd "M-J") 'paredit-join-sexps)
 
 (add-hook 'after-init-hook 'global-company-mode)
 (global-company-mode t)

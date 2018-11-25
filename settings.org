@@ -8,6 +8,12 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/" ) t)
 (package-initialize)
 #+END_SRC
+** org
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/" ) t)
+(package-initialize)
+#+END_SRC
 
 * varibales for modes
 
@@ -97,7 +103,11 @@ this is for setting the indentation.
   #+BEGIN_SRC emacs-lisp
   (electric-indent-mode 1)
   #+END_SRC
-
+* org mode contrib packages
+** taskjuggler
+   #+BEGIN_SRC emacs-lisp
+   (add-to-list 'org-export-backends 'taskjuggler)
+#+END_SRC
 * installed packages
 
 ** ido describe binding
@@ -192,6 +202,12 @@ https://www.emacswiki.org/emacs/Iedit
 #+BEGIN_SRC emacs-lisp
 (require 'paredit)
 (paredit-mode 1)
+(global-set-key (kbd "C-<left>") 'paredit-forward-slurp-sexp)
+(global-set-key (kbd "C-M-<left>") 'paredit-backward-slurp-sexp)
+(global-set-key (kbd "C-<right>") 'paredit-forward-barf-sexp)
+(global-set-key (kbd "C-M-<right>") 'paredit-backward-slurp-sexp)
+(global-set-key (kbd "M-S") 'paredit-split-sexp)
+(global-set-key (kbd "M-J") 'paredit-join-sexps)
 #+END_SRC
 
 ** company
