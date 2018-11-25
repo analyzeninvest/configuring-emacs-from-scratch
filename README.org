@@ -292,3 +292,22 @@ In this video, after describing the org mode readme to Github; I am showing a mi
 
    [[https://www.reddit.com/r/emacs/comments/9x3ofc/configuring_emacs_from_scratch_11/][Reddit]]
  
+* video 12: (orgmode contrib package)
+In this video, I am showing the demo on how to install orgmode contrib packages from Emacs. I am showing the demo for taskjuggler install and org-export for the same. A quick demo for the taskjuggler is also shown.
+
+Also, lately while coding in elisp, I found that some of the paredit bindins are not available. So I am setting them too in this video.
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(12).jpg]]
+
+** Related links for this video
+
+   [[analyzeninvest@protonmail.com][settings org file]]
+
+   [[https://www.youtube.com/watch?v=jJhePiH_8o4][YouTube]]
+
+   [[https://orgmode.org/worg/org-contrib/][Org contrib]]
+
+   [[https://d.tube/#!/v/cryptoaritra/ypstapxl][DTube]]
+
+   
