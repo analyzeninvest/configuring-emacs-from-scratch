@@ -73,7 +73,7 @@
 (global-set-key (kbd "C-<left>") 'paredit-forward-slurp-sexp)
 (global-set-key (kbd "C-M-<left>") 'paredit-backward-slurp-sexp)
 (global-set-key (kbd "C-<right>") 'paredit-forward-barf-sexp)
-(global-set-key (kbd "C-M-<right>") 'paredit-backward-slurp-sexp)
+(global-set-key (kbd "C-M-<right>") 'paredit-backward-barf-sexp)
 (global-set-key (kbd "M-S") 'paredit-split-sexp)
 (global-set-key (kbd "M-J") 'paredit-join-sexps)
 
