@@ -312,3 +312,19 @@ Also, lately while coding in elisp, I found that some of the paredit bindins are
 
    [[https://www.reddit.com/r/emacs/comments/a0bju2/configuring_emacs_from_scratch_12_org_contrib/][Reddit]]
    
+* video 12: (hide show mode)
+In this video, I am setting up hide-show minor mode. This is really helpfull navigating large codes and helpfull for viewing only the intended function's definations.
+
+#+CAPTION: Screenshot of the forth video.
+[[file:./snapshot/snap(14).jpg]]
+
+** Related links for this video
+
+   [[analyzeninvest@protonmail.com][settings org file]]
+
+   [[https://www.youtube.com/watch?v=3S_tvKYPR3Y][YouTube]]
+
+   [[https://d.tube/#!/v/cryptoaritra/elneg7he][DTube]]
+
+   [[https://www.reddit.com/r/emacs/comments/a4dbxu/configuring_emacs_from_scratch_13_hideshowmode/][Reddit]]
+
