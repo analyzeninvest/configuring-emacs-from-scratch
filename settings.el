@@ -36,6 +36,12 @@
 
 (electric-indent-mode 1)
 
+(add-hook 'prog-mode-hook (lambda () (hs-monor-mode 1)))
+(global-set-key (kbd "C-c @ @") 'hs-hide-all)
+(global-set-key (kbd "C-c @ h") 'hs-hide-block)
+(global-set-key (kbd "C-c @ s") 'hs-show-block)
+(global-set-key (kbd "C-c @ SPC") 'hs-show-all)
+
 (add-to-list 'org-export-backends 'taskjuggler)
 
 (ido-grid-mode 1)
