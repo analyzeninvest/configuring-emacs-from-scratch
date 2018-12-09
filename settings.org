@@ -107,7 +107,7 @@ this is for setting the indentation.
 ** hide show mode
 *** codes
  #+BEGIN_SRC emacs-lisp
-(add-hook 'prog-mode-hook (lambda () (hs-monor-mode 1)))
+(add-hook 'prog-mode-hook (lambda () (hs-minor-mode 1)))
 (global-set-key (kbd "C-c @ @") 'hs-hide-all)
 (global-set-key (kbd "C-c @ h") 'hs-hide-block)
 (global-set-key (kbd "C-c @ s") 'hs-show-block)

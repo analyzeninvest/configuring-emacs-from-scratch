@@ -36,7 +36,7 @@
 
 (electric-indent-mode 1)
 
-(add-hook 'prog-mode-hook (lambda () (hs-monor-mode 1)))
+(add-hook 'prog-mode-hook (lambda () (hs-minor-mode 1)))
 (global-set-key (kbd "C-c @ @") 'hs-hide-all)
 (global-set-key (kbd "C-c @ h") 'hs-hide-block)
 (global-set-key (kbd "C-c @ s") 'hs-show-block)
@@ -57,7 +57,7 @@
 (global-set-key (kbd "<f6>") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 ;(global-set-key (kbd "C-x C-f") 'counsel-find-file) ;;; keep IDO mode for find file
-(global-set-key (kbd "C-y") 'counsel-yank-pop)
+(global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "<f1> f") 'counsel-describe-function)
 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 (global-set-key (kbd "<f1> l") 'counsel-find-library)
