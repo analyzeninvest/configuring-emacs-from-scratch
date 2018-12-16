@@ -1,0 +1,15 @@
+service_factory/__init__.py,sha256=qJHg780ZCxGptZpYrBIiw7wV5VSYASi-6uCkfJq2Szw,352
+service_factory/compat.py,sha256=EGD9CEJo1UQ5-HOKYgAmrB8cn3ktkZRxhDpn1o8Egq4,503
+service_factory/errors.py,sha256=3nAv684RdoH4iwe3RkxpLdx2b0cAHVbyJCVcBsDeSbA,1905
+service_factory/exceptions.py,sha256=gpm3N3k6E3nGYeqvHVsqYlu12e4DeYJRsILYB-eZcrE,423
+service_factory/factory.py,sha256=B0FZPGX9lV_9Szq-UKaY4bq5zBz0L6gjWixUzi0eM_E,956
+service_factory/service.py,sha256=jZnz5eoWHNDxM2L4BWKpxbhanb8ljYPyQtSNWTg4eXg,2901
+service_factory/validation.py,sha256=dLqpAM1SNuzpNX1mSzky11ZDHQIgCKVRgE69zd0dOg8,1299
+service_factory/providers/__init__.py,sha256=9bNT0AYhwP2ApaXpRPZxJNKc_vNcQnOahDyvwpdaxUM,92
+service_factory/providers/basehttp.py,sha256=UmKJH0iRgyDuvouHjNUClBVex6je1nGUgBoiSbjNe54,2328
+service_factory-0.1.5.dist-info/DESCRIPTION.rst,sha256=UoI504-5PRB1oo8xvGk5VnKAZbzaiZOEFHowkvsvSNc,2771
+service_factory-0.1.5.dist-info/METADATA,sha256=237kbNVi_2GT7i27nFBpmCfQYIiej8xwGOlWpaoOq_g,3522
+service_factory-0.1.5.dist-info/RECORD,,
+service_factory-0.1.5.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+service_factory-0.1.5.dist-info/metadata.json,sha256=cOwbuzsNrbCBN93C5-BSGo0CfsZWAdyUUB7t3ZrCZqY,887
+service_factory-0.1.5.dist-info/top_level.txt,sha256=gt5UuhlXCDjkJP7XZDe5ulXUJOxZZI9iV4OB9uhJR-M,16

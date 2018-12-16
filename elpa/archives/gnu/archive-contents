@@ -12,9 +12,9 @@
        ((:keywords "tools" "processes" "convenience")
 	(:url . "https://github.com/leoliu/ack-el"))])
  (ada-mode .
-	   [(6 0 0)
+	   [(6 0 1)
 	    ((wisi
-	      (2 0))
+	      (2 0 1))
 	     (cl-lib
 	      (1 0))
 	     (emacs
@@ -186,7 +186,7 @@
 		      ((:url . "https://github.com/cpitclaudel/compact-docstrings")
 		       (:keywords "convenience" "faces" "lisp" "maint" "c"))])
  (company .
-	  [(0 9 7)
+	  [(0 9 9)
 	   ((emacs
 	     (24 3)))
 	   "Modular text completion framework" tar
@@ -295,9 +295,11 @@
 	     ((:url . "http://www.dr-qubit.org/emacs.php")
 	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
  (diff-hl .
-	  [(1 8 4)
+	  [(1 8 5)
 	   ((cl-lib
-	     (0 2)))
+	     (0 2))
+	    (emacs
+	     (24 3)))
 	   "Highlight uncommitted changes using VC" tar
 	   ((:keywords "vc" "diff")
 	    (:url . "https://github.com/dgutov/diff-hl"))])
@@ -346,7 +348,7 @@
 	     ((:keywords "killing" "convenience")
 	      (:url . "https://github.com/leoliu/easy-kill"))])
  (ebdb .
-       [(0 6)
+       [(0 6 1)
 	((emacs
 	  (25 1))
 	 (cl-lib
@@ -380,16 +382,18 @@
 	     ((:url . "http://elpa.gnu.org/packages/ediprolog.html")
 	      (:keywords "languages" "processes"))])
  (eglot .
-	[(1 2)
+	[(1 3)
 	 ((emacs
 	   (26 1))
 	  (jsonrpc
-	   (1 0 6)))
+	   (1 0 6))
+	  (flymake
+	   (1 0 2)))
 	 "Client for Language Server Protocol (LSP) servers" tar
 	 ((:keywords "convenience" "languages")
 	  (:url . "https://github.com/joaotavora/eglot"))])
  (el-search .
-	    [(1 7 15)
+	    [(1 8 3)
 	     ((emacs
 	       (25))
 	      (stream
@@ -476,7 +480,7 @@
 	   ((:url . "http://elpa.gnu.org/packages/flylisp.html")
 	    (:keywords))])
  (flymake .
-	  [(1 0 2)
+	  [(1 0 3)
 	   ((emacs
 	     (26 1)))
 	   "A universal on-the-fly syntax checker" single
@@ -813,7 +817,7 @@
 	 ((:keywords "extensions" "lisp")
 	  (:url . "https://github.com/Malabarba/names"))])
  (nhexl-mode .
-	     [(1 0)
+	     [(1 2)
 	      ((emacs
 		(24 4))
 	       (cl-lib
@@ -863,7 +867,7 @@
        ((:keywords "outlines" "hypermedia" "calendar" "wp")
 	(:url . "http://elpa.gnu.org/packages/org.html"))])
  (org-edna .
-	   [(1 0)
+	   [(1 0 1)
 	    ((emacs
 	      (25 1))
 	     (seq
@@ -926,7 +930,7 @@
 	 ((:url . "http://elpa.gnu.org/packages/poker.html")
 	  (:keywords "games"))])
  (posframe .
-	   [(0 3 0)
+	   [(0 4 2)
 	    ((emacs
 	      (26)))
 	    "Pop a posframe (just a frame) at point" single
@@ -1127,6 +1131,12 @@
 	     "Analog clock using Scalable Vector Graphics" single
 	     ((:url . "http://elpa.gnu.org/packages/svg-clock.html")
 	      (:keywords "demo" "svg" "clock"))])
+ (system-packages .
+		  [(1 0 10)
+		   ((emacs
+		     (24 3)))
+		   "functions to manage system packages" tar
+		   ((:url . "https://gitlab.com/jabranham/system-packages"))])
  (tNFA .
        [(0 1 1)
 	((queue
@@ -1284,7 +1294,7 @@
 	      ((:url . "http://elpa.gnu.org/packages/windresize.html")
 	       (:keywords "window"))])
  (wisi .
-       [(2 0 0)
+       [(2 0 1)
 	((cl-lib
 	  (1 0))
 	 (emacs
@@ -1300,7 +1310,7 @@
 	   ((:url . "http://elpa.gnu.org/packages/wpuzzle.html")
 	    (:keywords))])
  (xclip .
-	[(1 5)
+	[(1 7)
 	 nil "Copy&paste GUI clipboard from text terminal" single
 	 ((:url . "http://elpa.gnu.org/packages/xclip.html")
 	  (:keywords "convenience" "tools"))])

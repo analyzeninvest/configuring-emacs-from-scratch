@@ -42,6 +42,10 @@
 (global-set-key (kbd "C-c @ s") 'hs-show-block)
 (global-set-key (kbd "C-c @ SPC") 'hs-show-all)
 
+(setq org-structure-template-alist 
+      (cons '("se" "#+BEGIN_SRC emacs-lisp \n?\n#+END_SRC\n" "<src lang=\"emacs-lisp\">\n?\n</src>") 
+	    org-structure-template-alist))
+
 (add-to-list 'org-export-backends 'taskjuggler)
 
 (ido-grid-mode 1)
@@ -126,6 +130,9 @@
 (require 'highlight-indent-guides)
 (add-hook 'python-mode-hook 'highlight-indent-guides-mode)
 (setq highlight-indent-guides-method 'column)
+
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word)

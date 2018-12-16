@@ -1,0 +1,16 @@
+cd ..
+mkdir analyzeninvest-projects
+cd analyzeninvest-projects/
+mkdir tick-tack-toe
+cd tick-tack-toe/
+mv tick-tack-toe.el tic-tac-toe.el
+ls
+ls -l
+ls -larth
+cd ..
+mv tick-tack-toe/ tic-tac-toe
+ls
+cd tic-tac-toe/
+ls
+gimp &
+gimp &
