@@ -289,6 +289,11 @@ https://www.emacswiki.org/emacs/Iedit
 (global-set-key (kbd "C-=") 'er/expand-region)
 #+END_SRC
 
+#+BEGIN_SRC emacs-lisp 
+(require 'command-log-mode)
+(add-hook 'LaTeX-mode-hook 'command-log-mode)
+#+END_SRC
+
 * keybindings
 
 ** codes
@@ -297,8 +302,8 @@ https://www.emacswiki.org/emacs/Iedit
 (global-set-key (kbd "M-D") 'backward-kill-word)
 (global-set-key (kbd "DEL") 'backward-delete-char)
 (global-set-key (kbd "C-z") 'replace-string)
-(global-set-key (kbd "C-M-z") 'replace-regex)
-(global-set-key (kbd "C-Z") 'count-matches)
+(global-set-key (kbd "C-M-z") 'replace-regexp)
+(global-set-key (kbd "C-S-z") 'count-matches)
 #+END_SRC
 
 * themes

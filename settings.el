@@ -42,9 +42,7 @@
 (global-set-key (kbd "C-c @ s") 'hs-show-block)
 (global-set-key (kbd "C-c @ SPC") 'hs-show-all)
 
-(setq org-structure-template-alist 
-      (cons '("se" "#+BEGIN_SRC emacs-lisp \n?\n#+END_SRC\n" "<src lang=\"emacs-lisp\">\n?\n</src>") 
-	    org-structure-template-alist))
+(setq org-structure-template-alist (cons '("se" "#+BEGIN_SRC emacs-lisp \n?\n#+END_SRC\n" "<src lang=\"emacs-lisp\">\n?\n</src>") org-structure-template-alist))
 
 (add-to-list 'org-export-backends 'taskjuggler)
 
@@ -134,11 +132,14 @@
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+(require 'command-log-mode)
+(add-hook 'LaTeX-mode-hook 'command-log-mode)
+
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word)
 (global-set-key (kbd "DEL") 'backward-delete-char)
 (global-set-key (kbd "C-z") 'replace-string)
-(global-set-key (kbd "C-M-z") 'replace-regex)
-(global-set-key (kbd "C-Z") 'count-matches)
+(global-set-key (kbd "C-M-z") 'replace-regexp)
+(global-set-key (kbd "C-S-z") 'count-matches)
 
 (load-theme 'exotica t)

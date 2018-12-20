@@ -1898,6 +1898,7 @@ customizations apply to the current completion session."
               (funcall cleanup)))
           (when (setq unwind (ivy-state-unwind ivy-last))
             (funcall unwind))
+          (ivy--pulse-cleanup)
           (unless (eq ivy-exit 'done)
             (ivy-recursive-restore)))
       (ivy-call)
@@ -2855,20 +2856,23 @@ Should be run via minibuffer `post-command-hook'."
   (let ((resize-mini-windows nil)
         (update-fn (ivy-state-update-fn ivy-last))
         (old-mark (marker-position (mark-marker)))
+        (win (active-minibuffer-window))
         deactivate-mark)
-    (ivy--cleanup)
-    (when update-fn
-      (funcall update-fn))
-    (ivy--insert-prompt)
-    ;; Do nothing if while-no-input was aborted.
-    (when (stringp text)
-      (if ivy-display-function
-          (funcall ivy-display-function text)
-        (ivy-display-function-fallback text)))
-    (ivy--resize-minibuffer-to-fit)
-    ;; prevent region growing due to text remove/add
-    (when (region-active-p)
-      (set-mark old-mark))))
+    (when win
+      (with-selected-window win
+        (ivy--cleanup)
+        (when update-fn
+          (funcall update-fn))
+        (ivy--insert-prompt)
+        ;; Do nothing if while-no-input was aborted.
+        (when (stringp text)
+          (if ivy-display-function
+              (funcall ivy-display-function text)
+            (ivy-display-function-fallback text)))
+        (ivy--resize-minibuffer-to-fit)
+        ;; prevent region growing due to text remove/add
+        (when (region-active-p)
+          (set-mark old-mark))))))
 
 (defun ivy--resize-minibuffer-to-fit ()
   "Resize the minibuffer window size to fit the text in the minibuffer."
@@ -3930,8 +3934,7 @@ point before and after applying FN to ARGS."
         (unwind-protect
              (progn (apply fn args)
                     (setq end (goto-char (max bol (min (point) eol))))
-                    (setq text (buffer-substring-no-properties
-                                beg end))
+                    (setq text (buffer-substring-no-properties beg end))
                     (ivy--pulse-region beg end))
           (unless text
             (goto-char beg)))))
@@ -3968,27 +3971,42 @@ characters (previous if ARG is negative)."
 (defvar ivy--pulse-timer nil
   "Timer used to dispose of `ivy--pulse-overlay'.")
 
-(defvar ivy-pulse-delay 0.5
-  "Number of seconds to display `ivy-yanked-word' highlight.")
+(defcustom ivy-pulse-delay 0.5
+  "Number of seconds to display `ivy-yanked-word' highlight.
+When nil, disable highlighting."
+  :type '(choice
+          (number :tag "Delay in seconds")
+          (const :tag "Disable" nil)))
 
-(defun ivy--pulse-region (begin end)
-  (if ivy--pulse-overlay
-      (move-overlay ivy--pulse-overlay
-                    (min begin (overlay-start ivy--pulse-overlay))
-                    (max end (overlay-end ivy--pulse-overlay)))
-    (setq ivy--pulse-overlay (make-overlay begin end))
-    (overlay-put ivy--pulse-overlay 'face 'ivy-yanked-word))
-  (when ivy--pulse-timer
-    (cancel-timer ivy--pulse-timer))
-  (setq ivy--pulse-timer
-        (run-at-time ivy-pulse-delay nil #'ivy--pulse-cleanup)))
+(defun ivy--pulse-region (start end)
+  "Temporarily highlight text between START and END.
+The \"pulse\" duration is determined by `ivy-pulse-delay'."
+  (when ivy-pulse-delay
+    (if ivy--pulse-overlay
+        (let ((ostart (overlay-start ivy--pulse-overlay))
+              (oend (overlay-end ivy--pulse-overlay)))
+          (when (< end start)
+            (cl-rotatef start end))
+          ;; Extend the existing overlay's region to include START..END,
+          ;; but only if the two regions are contiguous.
+          (move-overlay ivy--pulse-overlay
+                        (if (= start oend) ostart start)
+                        (if (= end ostart) oend end)))
+      (setq ivy--pulse-overlay (make-overlay start end))
+      (overlay-put ivy--pulse-overlay 'face 'ivy-yanked-word))
+    (when ivy--pulse-timer
+      (cancel-timer ivy--pulse-timer))
+    (setq ivy--pulse-timer
+          (run-at-time ivy-pulse-delay nil #'ivy--pulse-cleanup))))
 
 (defun ivy--pulse-cleanup ()
   "Cancel `ivy--pulse-timer' and delete `ivy--pulse-overlay'."
   (when ivy--pulse-timer
-    (setq ivy--pulse-timer (cancel-timer ivy--pulse-timer)))
+    (cancel-timer ivy--pulse-timer)
+    (setq ivy--pulse-timer nil))
   (when ivy--pulse-overlay
-    (setq ivy--pulse-overlay (delete-overlay ivy--pulse-overlay))))
+    (delete-overlay ivy--pulse-overlay)
+    (setq ivy--pulse-overlay nil)))
 
 (defun ivy-kill-ring-save ()
   "Store the current candidates into the kill ring.
@@ -4212,7 +4230,7 @@ When `ivy-calling' isn't nil, call `ivy-occur-press'."
             str ?\n))
   (goto-char (point-min))
   (forward-line 4)
-  (while (re-search-forward "^[^:]+:[[:digit:]]+:" nil t)
+  (while (re-search-forward "^.*:[[:digit:]]+:" nil t)
     (ivy-add-face-text-property
      (match-beginning 0) (match-end 0) 'ivy-grep-info nil t)))
 

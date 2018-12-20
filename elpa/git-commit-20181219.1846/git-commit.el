@@ -12,7 +12,7 @@
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
 ;; Package-Requires: ((emacs "25.1") (dash "20180910") (with-editor "20181103"))
-;; Package-Version: 20181206.2347
+;; Package-Version: 20181219.1846
 ;; Keywords: git tools vc
 ;; Homepage: https://github.com/magit/magit
 
@@ -203,6 +203,8 @@ doing so takes Git longer than one second, then this hook isn't
 run at all.  For certain commands such as `magit-rebase-continue'
 this hook is never run because doing so would lead to a race
 condition.
+
+This hook is only run if `magit' is available.
 
 Also see `magit-post-commit-hook'."
   :group 'git-commit
@@ -537,7 +539,9 @@ This is only used if Magit is available."
   (set-buffer-modified-p nil))
 
 (defun git-commit-run-post-finish-hook (previous)
-  (when git-commit-post-finish-hook
+  (when (and git-commit-post-finish-hook
+             (require 'magit nil t)
+             (fboundp 'magit-rev-parse))
     (cl-block nil
       (let ((break (time-add (current-time)
                              (seconds-to-time 1))))
@@ -755,14 +759,30 @@ With a numeric prefix ARG, go forward ARG comments."
 
 ;;; Font-Lock
 
+(defvar-local git-commit-need-summary-line t
+  "Whether the text should have a heading that is separated from the body.
+
+For commit messages that is a convention that should not
+be violated.  For notes it is up to the user.  If you do
+not want to insist on an empty second line here, then use
+something like:
+
+  (add-hook \\='git-commit-setup-hook
+            (lambda ()
+              (when (equal (file-name-nondirectory (buffer-file-name))
+                           \"NOTES_EDITMSG\")
+                (setq git-commit-need-summary-line nil))))")
+
 (defun git-commit-summary-regexp ()
-  (concat
-   ;; Leading empty lines and comments
-   (format "\\`\\(?:^\\(?:\\s-*\\|%s.*\\)\n\\)*" comment-start)
-   ;; Summary line
-   (format "\\(.\\{0,%d\\}\\)\\(.*\\)" git-commit-summary-max-length)
-   ;; Non-empty non-comment second line
-   (format "\\(?:\n%s\\|\n\\(.+\\)\\)?" comment-start)))
+  (if git-commit-need-summary-line
+      (concat
+       ;; Leading empty lines and comments
+       (format "\\`\\(?:^\\(?:\\s-*\\|%s.*\\)\n\\)*" comment-start)
+       ;; Summary line
+       (format "\\(.\\{0,%d\\}\\)\\(.*\\)" git-commit-summary-max-length)
+       ;; Non-empty non-comment second line
+       (format "\\(?:\n%s\\|\n\\(.+\\)\\)?" comment-start))
+    "\\(EASTER\\) \\(EGG\\)"))
 
 (defun git-commit-extend-region-summary-line ()
   "Identify the multiline summary-regexp construct.
