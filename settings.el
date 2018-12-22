@@ -135,6 +135,14 @@
 (require 'command-log-mode)
 (add-hook 'LaTeX-mode-hook 'command-log-mode)
 
+(setq langtool-language-tool-jar "/snap/languagetool/15/usr/bin/languagetool-commandline.jar")
+(require 'langtool)
+(global-set-key "\C-x4w" 'langtool-check)
+(global-set-key "\C-x4W" 'langtool-check-done)
+(global-set-key "\C-x4l" 'langtool-switch-default-language)
+(global-set-key "\C-x44" 'langtool-show-message-at-point)
+(global-set-key "\C-x4c" 'langtool-correct-buffer)
+
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word)
 (global-set-key (kbd "DEL") 'backward-delete-char)
