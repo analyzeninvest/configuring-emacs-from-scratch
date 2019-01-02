@@ -324,7 +324,7 @@
 	  "Dis Mode Ain't Lotus: Spreadsheet program Emacs" tar
 	  ((:url . "http://elpa.gnu.org/packages/dismal.html"))])
  (djvu .
-       [(1 0)
+       [(1 0 1)
 	nil "Edit and view Djvu files via djvused" single
 	((:url . "http://elpa.gnu.org/packages/djvu.html")
 	 (:keywords "files" "wp"))])
