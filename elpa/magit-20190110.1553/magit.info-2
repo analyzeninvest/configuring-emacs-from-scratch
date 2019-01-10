@@ -1,6 +1,6 @@
 This is magit.info, produced by makeinfo version 6.5 from magit.texi.
 
-     Copyright (C) 2015-2018 Jonas Bernoulli <jonas@bernoul.li>
+     Copyright (C) 2015-2019 Jonas Bernoulli <jonas@bernoul.li>
 
      You can redistribute this document and/or modify it under the terms
      of the GNU General Public License as published by the Free Software
@@ -1696,10 +1696,11 @@ Appendix C Keystroke Index
 * T:                                     Notes.               (line   8)
 * T a:                                   Notes.               (line  51)
 * T c:                                   Notes.               (line  46)
-* t k:                                   Tagging.             (line  18)
+* t k:                                   Tagging.             (line  39)
 * T m:                                   Notes.               (line  37)
-* t p:                                   Tagging.             (line  24)
+* t p:                                   Tagging.             (line  46)
 * T p:                                   Notes.               (line  29)
+* t r:                                   Tagging.             (line  18)
 * T r:                                   Notes.               (line  21)
 * t t:                                   Tagging.             (line  13)
 * T T:                                   Notes.               (line  13)
@@ -2208,10 +2209,10 @@ Appendix D Command Index
 * magit-subtree-push:                    Subtree.             (line  36)
 * magit-subtree-split:                   Subtree.             (line  41)
 * magit-tag-create:                      Tagging.             (line  13)
-* magit-tag-delete:                      Tagging.             (line  18)
+* magit-tag-delete:                      Tagging.             (line  39)
 * magit-tag-popup:                       Tagging.             (line   8)
-* magit-tag-prune:                       Tagging.             (line  24)
-* magit-tag-release:                     Tagging.             (line  28)
+* magit-tag-prune:                       Tagging.             (line  46)
+* magit-tag-release:                     Tagging.             (line  18)
 * magit-toggle-buffer-lock:              Modes and Buffers.   (line  17)
 * magit-toggle-margin:                   Refreshing Logs.     (line  36)
 * magit-toggle-margin <1>:               Log Margin.          (line  56)
@@ -2465,7 +2466,6 @@ Appendix E Function Index
 * magit-status-maybe-update-blob-buffer: Section Movement.    (line  83)
 * magit-status-maybe-update-revision-buffer: Section Movement.
                                                               (line  77)
-* magit-tag-release:                     Tagging.             (line  28)
 * magit-wip-log:                         Wip Modes.           (line  48)
 * magit-wip-log-current:                 Wip Modes.           (line  57)
 * with-editor-usage-message:             Editing Commit Messages.

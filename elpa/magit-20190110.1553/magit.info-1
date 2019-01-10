@@ -1,6 +1,6 @@
 This is magit.info, produced by makeinfo version 6.5 from magit.texi.
 
-     Copyright (C) 2015-2018 Jonas Bernoulli <jonas@bernoul.li>
+     Copyright (C) 2015-2019 Jonas Bernoulli <jonas@bernoul.li>
 
      You can redistribute this document and/or modify it under the terms
      of the GNU General Public License as published by the Free Software
@@ -31,9 +31,9 @@ to perform almost all of their daily version control tasks directly from
 within Emacs.  While many fine Git clients exist, only Magit and Git
 itself deserve to be called porcelains.
 
-This manual is for Magit version 2.90.1 (v2.90.1-79-g50b5aad12+1).
+This manual is for Magit version 2.90.1 (v2.90.1-92-g21a6b757+1).
 
-     Copyright (C) 2015-2018 Jonas Bernoulli <jonas@bernoul.li>
+     Copyright (C) 2015-2019 Jonas Bernoulli <jonas@bernoul.li>
 
      You can redistribute this document and/or modify it under the terms
      of the GNU General Public License as published by the Free Software
@@ -6857,32 +6857,41 @@ Also see *note (gitman)git-tag::.
 
 ‘t t’     (‘magit-tag-create’)
 
-     Create a new tag with the given NAME at REV.  With a prefix
-     argument annotate the tag.
+     This command creates a new tag with the given NAME at REV.  With a
+     prefix argument it creates an annotate tag.
+
+‘t r’     (‘magit-tag-release’)
+
+     This commands creates an annotated release tag.  It assumes that
+     release tags match ‘magit-release-tag-regexp’.
+
+     First it prompts for the name of the new tag using the highest
+     existing tag as initial input and leaving it to the user to
+     increment the desired part of the version string.
+
+     Then it prompts for the message of the new tag.  The proposed tag
+     message is based on the message of the highest tag, provided that
+     that contains the corresponding version string and substituting the
+     new version string for that.  Otherwise it proposes something like
+     "Foo-Bar 1.2.3", given, for example, a TAG "v1.2.3" and a
+     repository located at something like "/path/to/foo-bar".
+
+     Then it calls "git tag –annotate –sign -m MSG TAG" to create the
+     tag, regardless of whether these arguments are enabled in the
+     popup.  Finally it shows the refs buffer to let the user quickly
+     review the result.
 
 ‘t k’     (‘magit-tag-delete’)
 
-     Delete one or more tags.  If the region marks multiple tags (and
-     nothing else), then offer to delete those.  Otherwise, prompt for a
-     single tag to be deleted, defaulting to the tag at point.
+     This command deletes one or more tags.  If the region marks
+     multiple tags (and nothing else), then it offers to delete those.
+     Otherwise, it prompts for a single tag to be deleted, defaulting to
+     the tag at point.
 
 ‘t p’     (‘magit-tag-prune’)
 
-     Offer to delete tags missing locally from REMOTE, and vice versa.
-
- -- Command: magit-tag-release
-
-     Create an opinionated release tag.
-
-     Assume version tags that match "\\‘v?[0-9]\*\\’".  Prompt for the
-     name of the new tag using the highest existing tag as initial input
-     and call "git tag –annotate –sign -m MSG" TAG, regardless of
-     whether these arguments are enabled in the popup.  Given a TAG
-     "v1.2.3" and a repository "/path/to/foo-bar", the MESSAGE would be
-     "Foo-Bar 1.2.3".
-
-     Because it is so opinionated, this command is not available from
-     the tag popup by default.
+     This command offers to delete tags missing locally from REMOTE, and
+     vice versa.
 
 
 File: magit.info,  Node: Notes,  Next: Submodules,  Prev: Tagging,  Up: Miscellaneous

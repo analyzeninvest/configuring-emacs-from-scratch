@@ -2561,19 +2561,29 @@ Offer to delete tags missing locally from REMOTE, and vice versa.
 \(fn TAGS REMOTE-TAGS REMOTE)" t nil)
 
 (autoload 'magit-tag-release "magit-tag" "\
-Create an opinionated release tag.
+Create an annotated release tag.
 
-Assume version tags that match \"\\\\`v?[0-9]\\\\(\\\\.[0-9]\\\\)*\\\\'\".
-Prompt for the name of the new tag using the highest existing tag
-as initial input and call \"git tag --annotate --sign -m MSG\" TAG,
-regardless of whether these arguments are enabled in the popup.
-Given a TAG \"v1.2.3\" and a repository \"/path/to/foo-bar\", the
-MESSAGE would be \"Foo-Bar 1.2.3\".
+Assume that release tags match `magit-release-tag-regexp'.
 
-Because it is so opinionated, this command is not available from
-the tag popup by default.
+First prompt for the name of the new tag using the highest
+existing tag as initial input and leaving it to the user to
+increment the desired part of the version string.
 
-\(fn TAG)" t nil)
+Then prompt for the message of the new tag.  Base the proposed
+tag message on the message of the highest tag, provided that
+that contains the corresponding version string and substituting
+the new version string for that.  Otherwise propose something
+like \"Foo-Bar 1.2.3\", given, for example, a TAG \"v1.2.3\" and a
+repository located at something like \"/path/to/foo-bar\".
+
+Then call \"git tag --annotate --sign -m MSG TAG\" to create the,
+tag, regardless of whether these arguments are enabled in the
+popup.  Finally show the refs buffer to let the user quickly
+review the result.
+
+\(fn TAG MSG)" t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "magit-tag" '("magit-")))
 
 ;;;***
 
