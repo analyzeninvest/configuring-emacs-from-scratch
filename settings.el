@@ -143,6 +143,8 @@
 (global-set-key "\C-x44" 'langtool-show-message-at-point)
 (global-set-key "\C-x4c" 'langtool-correct-buffer)
 
+(which-key-mode 1)
+
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word)
 (global-set-key (kbd "DEL") 'backward-delete-char)

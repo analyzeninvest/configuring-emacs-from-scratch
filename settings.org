@@ -304,7 +304,10 @@ https://www.emacswiki.org/emacs/Iedit
     (global-set-key "\C-x44" 'langtool-show-message-at-point)
     (global-set-key "\C-x4c" 'langtool-correct-buffer)
 #+END_SRC
-
+** which key
+   #+BEGIN_SRC emacs-lisp
+(which-key-mode 1)
+#+END_SRC
 * keybindings
 
 ** codes
