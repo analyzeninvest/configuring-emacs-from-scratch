@@ -4,7 +4,7 @@
 
 ;; Author: Artem Malyshev <proofit404@gmail.com>
 ;; URL: https://github.com/proofit404/anaconda-mode
-;; Package-Version: 20181210.416
+;; Package-Version: 20190111.1524
 ;; Version: 0.1.13
 ;; Package-Requires: ((emacs "25") (pythonic "0.1.0") (dash "2.6.0") (s "1.9") (f "0.16.2"))
 
@@ -158,11 +158,16 @@ else:
 # Define JSON-RPC application.
 
 import functools
+import threading
 
 def script_method(f):
     @functools.wraps(f)
     def wrapper(source, line, column, path):
-        return f(jedi.Script(source, line, column, path, environment=virtual_environment))
+        timer = threading.Timer(30.0, sys.exit)
+        timer.start()
+        result = f(jedi.Script(source, line, column, path, environment=virtual_environment))
+        timer.cancel()
+        return result
     return wrapper
 
 def process_definitions(f):
