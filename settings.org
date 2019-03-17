@@ -309,6 +309,18 @@ https://www.emacswiki.org/emacs/Iedit
    #+BEGIN_SRC emacs-lisp
 (which-key-mode 1)
 #+END_SRC
+** csv mode
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
+(autoload 'csv-mode "csv-mode"
+  "Major mode for editing comma-separated value files." t)
+#+END_SRC
+** multiple cursors
+#+BEGIN_SRC emacs-lisp
+(require 'multiple-cursors)
+(global-unset-key (kbd "M-<down-mouse-1>"))
+(global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+#+END_SRC
 * keybindings
 
 ** codes
