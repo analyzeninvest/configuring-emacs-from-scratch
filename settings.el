@@ -1,8 +1,8 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/" ) t)
 (package-initialize)
 
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/" ) t)
-(package-initialize)
+;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/" ) t)
+;(package-initialize)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)

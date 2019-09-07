@@ -12,8 +12,8 @@
 ** org
 
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/" ) t)
-(package-initialize)
+;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/" ) t)
+;(package-initialize)
 #+END_SRC
 
 * varibales for modes
